@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./fonts/font-awesome.min.css" rel="stylesheet" media="screen" />
+    <link href="./css/sample.less" type="text/css" rel="stylesheet/less" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+  <script src="./less/less.min.js" type="text/javascript"></script>
+
+
+<div id="img-carousel">
+<button class="glyphicon glyphicon-chevron-left" onclick="leftClick()"></button>
+<button class="glyphicon glyphicon-chevron-right" onclick="rightClick()"></button>
+  <ul id="img-controls">
+  </ul>
+</div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-collapse collapse">
+    <div class="main-header" class="clearfix">
+      <div>
+        <a class="close-section" href="#"><span><i class="fa fa-times"></i></span></a>
+      </div>
+
+      <div class="device-modes" class="hidden-sm hidden-xs">
+        <a id="desktop" href="#" class="active"><i class="fa fa-desktop"></i></a>
+        <a id="tablet-landscape" href="#"><i class="fa fa-tablet"></i></a>
+        <a id="tablet-portrait" href="#"><i class="fa fa-tablet"></i></a>
+        <a id="phone-landscape" href="#"><i class="fa fa-mobile"></i></a>
+        <a id="phone-portrait" href="#"><i class="fa fa-mobile"></i></a>
+      </div>
+
+      <div class="col-xs-5 col-sm-5 col-md-3">
+        <div id="search-wrapper">
+          <span class="search-label">Search for content</span>
+          <span class="pull-right"><i class="sp-angle-up"></i><i class="sp-angle-down"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-nav">
+      <div class="container">
+        <div class="header-top">
+          <div class="pull-right" id="social-icons" onclick="pageRedirect">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" id="portfolio-actions">
+              <!--<li class=""><a href="#home">Home</a></li>
+              <li class=""><a href="#explore">Explore</a></li>
+              <li class=""><a href="#event">Event</a></li>
+              <li class=""><a href="#about">About</a></li>
+              <li><a class="" href="#" target="_blank">My Recent Works</a></li>
+              <li class=""><a href="#contact">Contact</a></li>-->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</nav>
+
+</body>
+  <script src="./js/data.js" type="text/javascript"></script>
+  <script src="./js/portfolio.js" type="text/javascript"></script>
+</html>
