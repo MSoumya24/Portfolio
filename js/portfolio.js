@@ -4,6 +4,7 @@ var imgCntnr = document.getElementById('img-carousel');
 var imgIndex = 0;
 n = 1;
 leftClickIndex = 0;
+var scrollAmount = 0;
 function getImages() {
     for(var i=0;i<arr.length;i++) {
         var createImg = document.createElement('img');
@@ -20,7 +21,7 @@ function getImages() {
     }
 }
 getImages();
-function leftClick() {
+/*function leftClick() {
     if(imgIndex == 0){
         imgIndex = arr.length - 1;
         document.querySelectorAll('img')[imgIndex].style.removeProperty('right');
@@ -30,15 +31,13 @@ function leftClick() {
         imgIndex--;
         elems[imgIndex].style.right = (docwidth * (imgIndex+1)) - docwidth + "px";
     }
-}
+}*/
 /*id = setInterval(rightClick, 2000);*/
-function rightClick() {
+/*function rightClick() {
         if(n < arr.length){
-            setInterval(function(){
                 elems[imgIndex + 1].style.right = (docwidth * n) + "px";
                 imgIndex++;
                 n++;
-            },4000);
         }
         else{
             count = 0;
@@ -49,6 +48,21 @@ function rightClick() {
                 count++;
             }
         }
+}*/
+
+function rightClick(){
+  setInterval(function rightInterval() {
+        if(scrollAmount < docwidth){
+            window.scrollBy(200,0);
+            scrollAmount += 200;
+        }
+        else{
+            scrollAmount = 0;
+            clearInterval(rightInterval());
+        }
+    },500);
+
+
 }
 
 
@@ -60,6 +74,16 @@ function rightClick() {
         var createList = document.createElement('li');
         createList.innerHTML = '<a class="portfolioActionItem">' + portfolioList[j].actionItem + '</a>';
         getactionItemCntnr.appendChild(createList);
+
+        (function(index){
+                getactionItemCntnr.children[j].onclick = function () {
+                    setInterval(function () {
+                        window.scrollBy(0, 200);
+                        var getLabel = getactionItemCntnr.children[index].innerText.toLowerCase();
+                        imgCntnr.className = getLabel +"-template";
+                    },2000);
+                }
+        })(j);
     }
 }) ();
 

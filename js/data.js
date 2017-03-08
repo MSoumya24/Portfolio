@@ -19,11 +19,7 @@ var arr = [{
 
 var portfolioList = [{
   "actionItem" : "Home"
-}, {
-  "actionItem" : "Explore"
-}, {
-  "actionItem" : "Event"
-}, {
+},  {
   "actionItem" : "About"
 }, {
   "actionItem" : "My Recent Works"
