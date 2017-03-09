@@ -2,7 +2,7 @@ var docheight = window.innerHeight;
 var docwidth = window.innerWidth;
 var imgCntnr = document.getElementById('img-carousel');
 var imgIndex = 0;
-n = 1;
+n = 0;
 leftClickIndex = 0;
 var scrollAmount = 0;
 function getImages() {
@@ -51,18 +51,21 @@ getImages();
 }*/
 
 function rightClick(){
-  setInterval(function rightInterval() {
+  setInterval(function() {
         if(scrollAmount < docwidth){
-            window.scrollBy(200,0);
-            scrollAmount += 200;
+            if(n <= (arr.length - 1)){
+                window.scrollBy((docwidth / 4),0);
+                scrollAmount += (docwidth / 4);
+            }
         }
-        else{
-            scrollAmount = 0;
-            clearInterval(rightInterval());
-        }
-    },500);
-
-
+    },1000);
+    n++;
+    scrollAmount = 0;
+    clearInterval();
+    if( n == (arr.length-1)){
+        n = 0;
+       window.scrollBy(-(docwidth) * (arr.length - 1));
+    }
 }
 
 
