@@ -46,6 +46,7 @@ getImages();
                 imgIndex--;
                 n--;
                 count++;
+                
             }
         }
 }*/
@@ -63,7 +64,6 @@ function rightClick(){
     scrollAmount = 0;
     clearInterval();
     if( n == (arr.length-1)){
-        n = 0;
        window.scrollBy(-(docwidth) * (arr.length - 1));
     }
 }
@@ -93,4 +93,6 @@ function rightClick(){
 // ************ Self Invoking Function Ends **************//
 
 
-
+function pageRedirect(url){
+   window.open(url,'blank');
+}
