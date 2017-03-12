@@ -93,6 +93,3 @@ function rightClick(){
 // ************ Self Invoking Function Ends **************//
 
 
-function pageRedirect(url){
-   window.open(url,'blank');
-}
