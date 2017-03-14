@@ -1,6 +1,7 @@
 var docheight = window.innerHeight;
 var docwidth = window.innerWidth;
 var imgCntnr = document.getElementById('img-carousel');
+
 var imgIndex = 0;
 n = 0;
 leftClickIndex = 0;
@@ -77,19 +78,27 @@ function rightClick(){
         var createList = document.createElement('li');
         createList.innerHTML = '<a class="portfolioActionItem">' + portfolioList[j].actionItem + '</a>';
         getactionItemCntnr.appendChild(createList);
-
-        (function(index){
+        var createDiv = document.createElement('div');
+        imgCntnr.appendChild(createDiv);
+        createDiv[j].className = portfolioList[j].actionItem + "-template";
+        /*(function(index){
                 getactionItemCntnr.children[j].onclick = function () {
                     setInterval(function () {
                         window.scrollBy(0, 200);
-                        var getLabel = getactionItemCntnr.children[index].innerText.toLowerCase();
-                        imgCntnr.className = getLabel +"-template";
+                       /!* var getLabel = getactionItemCntnr.children[index].innerText.toLowerCase();
+                        createDiv.className = getLabel +"-template";*!/
                     },2000);
                 }
-        })(j);
+        })(j);*/
     }
 }) ();
 
 // ************ Self Invoking Function Ends **************//
 
 
+// ************ Y Axis Function Starts **************//
+
+
+
+
+// ************ Y Axis Function Ends **************//
