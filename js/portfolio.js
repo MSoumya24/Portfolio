@@ -79,17 +79,16 @@ function rightClick(){
         createList.innerHTML = '<a class="portfolioActionItem">' + portfolioList[j].actionItem + '</a>';
         getactionItemCntnr.appendChild(createList);
         var createDiv = document.createElement('div');
-        imgCntnr.appendChild(createDiv);
-        createDiv[j].className = portfolioList[j].actionItem + "-template";
-        /*(function(index){
+        imgCntnr.parentNode.insertBefore(createDiv, imgCntnr);
+        (function(index){
                 getactionItemCntnr.children[j].onclick = function () {
                     setInterval(function () {
                         window.scrollBy(0, 200);
-                       /!* var getLabel = getactionItemCntnr.children[index].innerText.toLowerCase();
-                        createDiv.className = getLabel +"-template";*!/
-                    },2000);
+                    },500);
                 }
-        })(j);*/
+            var getLabel = getactionItemCntnr.children[index].innerText.toLowerCase();
+            createDiv.className = getLabel +"-template";
+        })(j);
     }
 }) ();
 
