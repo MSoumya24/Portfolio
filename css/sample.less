@@ -2,8 +2,9 @@
 // @group COMPONENT: NAVBAR STARTS
 // ------------------------------------------------------------
 body {
-  overflow: hidden;
+  /*overflow: hidden;*/
   #img-carousel {
+    display: none;
     width: 100%;
     img {
       width: 100%;
@@ -63,6 +64,55 @@ body {
       }
     }
   }
+  .about-wrapper{
+    position: absolute;
+    top: 60px;
+    margin: auto;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 5rem;
+    .section-title{
+      font-family: Arial Narrow;
+      display: inline-block;
+      border-bottom: 5px solid #df473e;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+      ul{
+        li{
+          list-style: none;
+          padding: 10px 0 5px;
+          border-bottom: 1px solid #ededed;
+          width: 80%;
+          i{
+            padding: 4px 10px 0 0;
+            color: #df473e;
+          }
+        }
+      }
+    .fav-song-label{
+      margin-top: 10px;
+    }
+  }
+  .contact-wrapper{
+    display: none;
+    position: absolute;
+    top: 60px;
+    margin: auto;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 5rem;
+    .contact-data-section{
+      top: 25%;
+      position: relative;
+    }
+    .contact-left-wrapper{
+      margin-left: 0;
+    }
+  }
+
   .main-header {
     div {
       float: right;
@@ -88,8 +138,23 @@ body {
           transform: rotate(-90deg);
         }
       }
-    }
-    // #END '.device-modes'
+    }  // #END '.device-modes'
+
+
+    #portfolio-actions{
+      li{
+        float: left;
+      }
+      a{
+        color: #ffffff;
+        font-size: 14px;
+        background-color: transparent;
+        padding-top: 2.2rem;
+        &:hover{
+          color: #e6463a;
+        }
+      }
+    }  // #END '.portfolio-actions'
 
     .close-section {
       display: inline-block;
@@ -192,9 +257,6 @@ body {
     }
   }
 
-  .about-template{
-    background-color: pink;
-  }
 
 
 }

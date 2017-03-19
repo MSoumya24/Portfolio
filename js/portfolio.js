@@ -1,7 +1,9 @@
 var docheight = window.innerHeight;
 var docwidth = window.innerWidth;
 var imgCntnr = document.getElementById('img-carousel');
-
+/*var footerPart = document.createElement('div');
+imgCntnr.parentNode.insertBefore(footerPart, imgCntnr);
+footerPart.className += "footer-part";*/
 var imgIndex = 0;
 n = 0;
 leftClickIndex = 0;
@@ -78,19 +80,20 @@ function rightClick(){
         var createList = document.createElement('li');
         createList.innerHTML = '<a class="portfolioActionItem">' + portfolioList[j].actionItem + '</a>';
         getactionItemCntnr.appendChild(createList);
-        var createDiv = document.createElement('div');
-        imgCntnr.parentNode.insertBefore(createDiv, imgCntnr);
+        //var createDiv = document.createElement('div');
+        //imgCntnr.parentNode.insertBefore(createDiv, imgCntnr);
         (function(index){
                 getactionItemCntnr.children[j].onclick = function () {
                     setInterval(function () {
                         window.scrollBy(0, 200);
                     },500);
                 }
-            var getLabel = getactionItemCntnr.children[index].innerText.toLowerCase();
-            createDiv.className = getLabel +"-template";
+            //var getLabel = getactionItemCntnr.children[index].innerText.toLowerCase();
+            //createDiv.className = getLabel +"-template";
         })(j);
     }
 }) ();
+
 
 // ************ Self Invoking Function Ends **************//
 
